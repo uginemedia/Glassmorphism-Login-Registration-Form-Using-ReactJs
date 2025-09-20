@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./assets/bg-2.jpg") no-repeat center center/cover;
+}
+
+.auth-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  z-index: 10;
+  color: #fff;
+  animation: fadeInDown 0.7s ease-out;
+}
+
+.auth-container h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.input-group ion-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2em;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px 12px 30px;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  font-size: 0.8em;
+  color: #ffab2d;
+}
+
+.options-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+.options-group label {
+  cursor: pointer;
+}
+
+.options-group a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 15px;
+  background: #ffab2d;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  background: #957546;
+}
+
+.toggle-link {
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+.toggle-link span {
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* --- Animation --- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  animation: infinite ease-in-out;
+}
+
+/* Fade Down Animation */
+@keyframes translateY {
+  0% {
+    transform: translateY(0px);
+  }50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+  animation-name: translateY;
+  animation-duration: 10s;
+}
+
+.shape-2 {
+  width: 100px;
+  height: 100px;
+  top: 15%;
+  right: 32%;
+  z-index: 1; 
+  animation-name: translateY;
+  animation-duration: 12s;
+  animation-delay: 3s;
+}
+
+.shape-3 {
+  width: 50px;
+  height: 50px;
+  top: 10%;
+  right: 50%;
+  border-radius: 10px;
+  z-index: 11; 
+  animation-name: translateY;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(150px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+
+.shape-4 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  right: 35%;
+  z-index: 11; 
+  animation-name: float;
+  animation-duration: 14s;
+  animation-delay: 3s;
+}
